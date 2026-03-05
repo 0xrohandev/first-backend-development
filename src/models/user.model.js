@@ -66,7 +66,7 @@ userSchema.methods.isPasswordCorrect = async function (password) {
     return await bcrypt.compare(password, this.password)     // Compares the password (encrypted) that the user sends with the actual encrypted password
 }
 
-// A custom method isPasswordCorrect is defined to generate access token
+// A custom method generateAccessToken is defined to generate access token
 userSchema.methods.generateAccessToken = function() {
     return jwt.sign(
         {
@@ -82,7 +82,7 @@ userSchema.methods.generateAccessToken = function() {
     )
 }
 
-// A custom method isPasswordCorrect is defined to generate refresh token
+// A custom method generateRefreshToken is defined to generate refresh token
 userSchema.methods.generateRefreshToken = function() {
     return jwt.sign(
         {

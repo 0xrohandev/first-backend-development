@@ -25,3 +25,20 @@ Client error responses (400 – 499)
 Server error responses (500 – 599)
 
 node js api error: [official npm documentation](https://nodejs.org/api/errors.html)
+
+
+We have added user and video model.
+
+In User model we have used dependencies like bcrypt (to encrypt passwords) and jsonwebtoken (to generate access and refresh token).
+
+bcrypt [official doc](https://www.npmjs.com/package/bcrypt)
+jsonwebtoken [official doc](https://www.npmjs.com/package/jsonwebtoken)
+
+Built a custom method generateAccessToken is defined to generate access token and also built a custom method generateRefreshToken is defined to generate refresh token.
+
+Also used a pre hook to listen for a save event and when completed returns next (because it is a middleware). This pre hook when triggered on save event checks if the password is modified and sets the password (if modified).
+Built custom method to check password is correct or not.
+
+In Video model we have used dependency like mongoose-aggregate-paginate-v2 to write complex queries. we will learn more about this in future.
+mongoose-aggregate-paginate-v2 [official doc](https://www.npmjs.com/package/mongoose-aggregate-paginate-v2)
+mongoDB aggregation pipe line [mongoDB official doc](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/)
