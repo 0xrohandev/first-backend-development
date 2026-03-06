@@ -42,3 +42,14 @@ Built custom method to check password is correct or not.
 In Video model we have used dependency like mongoose-aggregate-paginate-v2 to write complex queries. we will learn more about this in future.
 mongoose-aggregate-paginate-v2 [official doc](https://www.npmjs.com/package/mongoose-aggregate-paginate-v2)
 mongoDB aggregation pipe line [mongoDB official doc](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/)
+
+
+Add cloudinary.js as util and multer.middleware.js as middleware for file upload
+
+We have decieded, that when a user uploads a file via multer, we will store it on the local storage (over here public/temp), after that we will upload the file in cloudinary and unlink the file from local storsge using built-in file system of nodejs. We are storing this file in our local storage temporarily because in production grade application, this type of practices are very common. The real pupose of doing this is if there is a condition where the file fails to upload in cloudinary, we can always reattempt to upload it.
+
+Dependencies used here: cloudinary, multer.
+
+cloudinary: [How to get started? official doc](https://console.cloudinary.com/app/c-8a4731e6ac5eb3c17a8d85f1b62c5c/image/getting-started)
+
+multer: [official doc](https://github.com/expressjs/multer)
