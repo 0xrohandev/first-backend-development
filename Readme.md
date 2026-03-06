@@ -53,3 +53,58 @@ Dependencies used here: cloudinary, multer.
 cloudinary: [How to get started? official doc](https://console.cloudinary.com/app/c-8a4731e6ac5eb3c17a8d85f1b62c5c/image/getting-started)
 
 multer: [official doc](https://github.com/expressjs/multer)
+
+
+HTTP - Hyper Text Transfer Protocol
+
+What are HTTP headers?
+HTTP headers are nothing but meta data => key - value pair sent along with request & response.
+
+Used in caching, authentication, manage state.
+
+HTTP headers are of different types mainly:
+1) request headers --> from client
+2) response headers --> from server
+3) representation headers --> encoding compression
+4) pay-load headers --> data
+
+Most common headers:
+Accecpt : application/ json
+User - Agent
+Authorization
+Content-Type
+Cookie
+Cache-Control
+
+CORS
+Acess-Control-Allow-Origin
+Acess-Control-Allow-Credentials
+Acess-Control-Allow-Method
+
+Security
+Cross-Origin-Embedder-Policy
+Cross-Origin-Opener-Policy
+Content-Security-Policy
+X-XCS-Protection
+
+HTTP Methods
+
+Basic set of opperations that can be used to interact with server
+
+1) .GET       : Retrieve a resource.
+
+2) .HEAD      : No message boody (response header only).
+
+3) .OPTIONS   : What operations are available?
+
+4) .TRACE     : Loop back test (get same data).
+
+5) .DELETE    : Remove a resource.
+
+6) .PUT       : Replace a resource.
+
+7) .POST      : Interact with resource (mostly add).
+
+8) .PATCH     : Change part of a resource.
+
+HTTP status code already mentioned above.
